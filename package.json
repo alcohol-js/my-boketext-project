@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "text:empty":"vue serve ./src/components/Empty/text.vue",
-    "text:imageloader":"vue serve ./src/components/ImageLoader/text.vue"
+    "text:imageloader":"vue serve ./src/components/ImageLoader/text.vue",
+    "text:contact":"vue serve ./src/components/Contact/text.vue",
+    "text:menu":"vue serve ./src/components/Menu/text.vue"
   },
   "dependencies": {
     "core-js": "^3.6.5",
