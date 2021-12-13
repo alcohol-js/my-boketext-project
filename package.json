@@ -5,14 +5,17 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "text:empty":"vue serve ./src/components/Empty/text.vue",
-    "text:imageloader":"vue serve ./src/components/ImageLoader/text.vue",
-    "text:contact":"vue serve ./src/components/Contact/text.vue",
-    "text:menu":"vue serve ./src/components/Menu/text.vue"
+    "text:empty": "vue serve ./src/components/Empty/text.vue",
+    "text:imageloader": "vue serve ./src/components/ImageLoader/text.vue",
+    "text:contact": "vue serve ./src/components/SiteAside/Contact/text.vue",
+    "text:menu": "vue serve ./src/components/SiteAside/Menu/text.vue",
+    "text:siteaside": "vue serve ./src/components/SiteAside/text.vue",
+    "text:layout": "vue serve ./src/components/Layout/text.vue"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

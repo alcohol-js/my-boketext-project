@@ -1,11 +1,11 @@
 <template>
   <div class="menu-container ">
-      <a v-for="item in items" :key="item.link" :href="item.link" :class="{selected:isSelected(item.link)}">
+      <RouterLink :exact="item.exact" v-for="item in items" :key="item.link" :to="item.name" >
           <div class="icon">
               <Icon :type="item.icon"/>
           </div>
           <span>{{item.title}}</span>
-      </a>
+      </RouterLink>
   </div>
 </template>
 
@@ -19,39 +19,38 @@ data(){
     return {
         items:[
             {
-                link:"/",
+                name:"Home",
                 title:"首页",
-                icon:"home"
+                icon:"home",
+                exact:true,
             },
             {
-                link:"/blog",
+                name:"Blog",
                 title:"文章",
-                icon:"blog"
+                icon:"blog",
+                exact:false,
             },
             {
-                link:"/about",
+                name:"About",
                 title:"关于我",
-                icon:"about"
+                icon:"about",
+                exact:true,
             },
             {
-                link:"/project",
+                name:"Project",
                 title:"项目&效果",
-                icon:"code"
+                icon:"code",
+                exact:true,
             },
             {
-                link:"/message",
+                name:"Message",
                 title:"留言板",
-                icon:"chat"
+                icon:"chat",
+                exact:true,
             }
         ],
     };
 },
-methods:{
-    isSelected(path){
-        console.log(path);
-        return location.pathname.toLowerCase() === path.toLowerCase();
-    }
-}
 }
 </script>
 
@@ -72,7 +71,7 @@ methods:{
         &:hover{
             color: #fff;
         }
-        &.selected{
+        &.router-link-active{
             background: #2d2d2d;
         }
     }

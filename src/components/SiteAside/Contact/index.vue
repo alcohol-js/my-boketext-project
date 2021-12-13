@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import Icon from "../Icon"
+import Icon from "@/components/Icon"
 import weixin from "@/assets/weixin.png";
 export default {
 components:{
@@ -53,12 +53,9 @@ data(){
 .contact-container{
     color: @lightWords;
     width: 100%;
-    // height: 100%;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: flex-start;
     @itemHeight:40px;
-    // margin: 10px 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
     > div{
         position: relative;
         margin: 5px 7px;
@@ -74,6 +71,7 @@ data(){
             display: flex;
             align-items: center;
             cursor: pointer;
+            font-size: 14px;
         }
         .pop{
             position: absolute;
