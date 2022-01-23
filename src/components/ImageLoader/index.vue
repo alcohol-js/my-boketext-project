@@ -37,8 +37,9 @@ methods:{
         this.Loaded = true;
         setTimeout(() => {
             this.allFinished = true;
+            this.$emit("load");
         }, this.duration);
-        console.log('111');
+        // console.log('111');
     },
 }
 }

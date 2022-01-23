@@ -10,10 +10,15 @@
     "text:contact": "vue serve ./src/components/SiteAside/Contact/text.vue",
     "text:menu": "vue serve ./src/components/SiteAside/Menu/text.vue",
     "text:siteaside": "vue serve ./src/components/SiteAside/text.vue",
-    "text:layout": "vue serve ./src/components/Layout/text.vue"
+    "text:layout": "vue serve ./src/components/Layout/text.vue",
+    "text:rightlist": "vue serve ./src/views/Blog/components/rightList/text.vue"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
+    "highlight.js": "^11.4.0",
+    "mockjs": "^1.1.0",
+    "querystring": "^0.2.1",
     "vue": "^2.6.11",
     "vue-router": "^3.5.3"
   },

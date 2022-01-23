@@ -1,6 +1,6 @@
 <template>
   <div class="menu-container ">
-      <RouterLink :exact="item.exact" v-for="item in items" :key="item.link" :to="item.name" >
+      <RouterLink :exact="item.exact" v-for="item in items" :key="item.link" :to="{name:item.name}" >
           <div class="icon">
               <Icon :type="item.icon"/>
           </div>
