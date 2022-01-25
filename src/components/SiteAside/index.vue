@@ -1,9 +1,9 @@
 <template>
   <div class="site-aside-container">
       <div class="avatar">
-          <Avatar url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRExcsx9k3x3_MbeiOZ__VkpPEeaaZQIgFGbmB1fAAfKxiQwdxeuYpKhFFFUF8T8MzGk04&usqp=CAU" />
+          <Avatar :url="data.avatar" />
       </div>
-      <h1>海上月林间叶</h1>
+      <h1>{{data.siteTitle}}</h1>
       <Menu />
       <Contact />
   </div>
@@ -13,12 +13,14 @@
 import Avatar from "@/components/Avatar";
 import Menu from "./Menu";
 import Contact from "./Contact";
+import {mapState} from "vuex";
 export default {
 components:{
     Avatar,
     Menu,
     Contact,
-}
+},
+computed:mapState("settings",["data"]),
 }
 </script>
 

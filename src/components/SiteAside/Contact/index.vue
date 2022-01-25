@@ -1,13 +1,13 @@
 <template>
   <div class="contact-container">
       <div>
-          <a href="">
+          <a :href="data.github">
               <Icon type="github"/>
               <span>alcohol_js</span>
           </a>
       </div>
       <div>
-          <a href="">
+          <a :href="data.mail">
               <Icon type="mail"/>
               <span>alcohol_js@163.com</span>
           </a>
@@ -15,19 +15,19 @@
       <div>
           <a >
               <Icon type="weixin" class="weixin"/>
-              <span>qq1106142270</span>
+              <span>{{data.weixin}}</span>
           </a>
           <div class="pop">
-              <img :src="weixin">
+              <img :src="data.weixinQrCode">
           </div>
       </div>
       <div>
-          <a href="">
+          <a>
               <Icon type="qq"/>
-              <span>alcohol_js</span>
+              <span>{{data.qq}}</span>
           </a>
           <div class="pop">
-              <img :src="weixin">
+              <img :src="data.qqQrCode">
           </div>
       </div>
   </div>
@@ -36,6 +36,7 @@
 <script>
 import Icon from "@/components/Icon"
 import weixin from "@/assets/weixin.png";
+import {mapState} from "vuex";
 export default {
 components:{
     Icon,
@@ -44,7 +45,8 @@ data(){
     return{
         weixin,
     }
-}
+},
+computed:mapState("settings",["data"]),
 }
 </script>
 

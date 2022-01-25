@@ -2,15 +2,19 @@ import "./style/global.less";
 import Vue from "vue";
 import App from "./App.vue";
 import router from "@/router/index.js";
+import store from "./store";
 import "@/mock";
 import showMessage from "@/utils/showMessage.js";
 import "./eventBus";
+
+store.dispatch("settings/fetchSetting");
 
 Vue.config.productionTip = false;
 Vue.prototype.$showMessage = showMessage;
 
 new Vue({
   router,
+  store,
   render: (h) => h(App),
 }).$mount("#app");
 
